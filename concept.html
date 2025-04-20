@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>보안이란?</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Noto Sans KR', sans-serif;
+        background-color: #f4f9ff;
+        color: #333;
+      }
+
+      /* 상단 메뉴 */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background-color: #1976d2;
+        color: white;
+        padding: 1rem;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .menu-btn {
+        display: block;
+        font-size: 1.6rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      .menu-list {
+        display: none;
+        flex-direction: column;
+        background-color: #1976d2;
+        position: absolute;
+        top: 60px;
+        right: 1rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        z-index: 1000;
+      }
+
+      .menu-list a {
+        color: white;
+        padding: 0.75rem 1rem;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: background-color 0.3s ease;
+      }
+
+      .menu-list a:hover {
+        background-color: #1565c0;
+      }
+
+      .menu-list a:active {
+        background-color: #0d47a1;
+      }
+
+      .menu-list a.active {
+        background-color: white;
+        color: #1565c0;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      .menu-list.show {
+        display: flex;
+      }
+
+      @media (min-width: 768px) {
+        .menu-btn {
+          display: none;
+        }
+
+        .menu-list {
+          display: flex !important;
+          flex-direction: row;
+          position: static;
+          background: none;
+          gap: 1rem;
+          margin-left: auto;
+        }
+
+        .menu-list a {
+          border: none;
+          padding: 0.5rem 0.8rem;
+        }
+
+        .menu-list a.active {
+          background-color: white;
+          color: #1565c0;
+          border-radius: 6px;
+        }
+      }
+
+      main {
+        padding: 2rem;
+        max-width: 900px;
+        margin: auto;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        margin-top: 2rem;
+      }
+
+      h1 {
+        color: #1976d2;
+      }
+
+      p {
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">🔐 웹프로그래밍 OO조</div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <div id="menuList" class="menu-list">
+          <a href="index.html" class="active">보안이란?</a>
+          <a href="ex.html">암호학이란?</a>
+          <a href="job.html">진로 가이드</a>
+          <a href="intro.html">팀원 소개</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1>보안이란?</h1>
+      <p>
+        보안(Security)은 정보, 시스템, 자산 등을 외부의 위협으로부터 보호하는
+        개념입니다. 현대 사회에서는 디지털 보안이 특히 중요하며, 해킹, 악성코드,
+        데이터 유출 등 다양한 위협에 대응해야 합니다.
+      </p>
+      <p>
+        정보 보안은 기밀성(Confidentiality), 무결성(Integrity),
+        가용성(Availability)의 세 가지 원칙을 바탕으로 합니다. 이를 CIA
+        Triad라고 부르며, 보안 시스템의 핵심 기준이 됩니다.
+      </p>
+      <p>
+        기밀성은 권한이 없는 당사자가 데이터에 접근할 수 없도록 보장하는 것을
+        의미합니다. 개인 정보는 비공개로 유지되어야하며 권한이 없는 사람이
+        보호된 데이터에 대한 암호를 얻으면 기밀 유지 위반이 됩니다.
+      </p>
+      <p>
+        무결성은 회사 데이터베이스에 포함된 모든 정보가 완전하고 정확한지
+        확인하는 것을 의미합니다. 무결성은 사람들이 무단으로 추가, 변경 또는
+        삭제하는 등 데이터를 변조하는 것을 방지하는 것을 목표로 합니다. 이것은
+        의도적으로 데이터를 변경하는 악의적 사용자와 무단 방식으로 데이터를
+        변경하는 선의의 사용자를 모두 방지하는데 적용됩니다.
+      </p>
+      <p>
+        가용성은 사용자가 필요할 때 액세스 권한이 부여된 정보를 이용할 수 있도록
+        보장합니다. 정보 보안 조치 및 정책이 승인된 데이터에 대한 액세스를
+        방해해서는 안 된다는 원칙을 담고 있습니다. 대부분의 가용성은 조직의
+        사이트 다운을 방지하기 위해 하드웨어 및 소프트웨어의 견고성을 보장하는
+        작업과 같이 간단합니다.
+      </p>
+      <p>
+        보안 유형으로는 정보 보안, IT보안, 사이버 보안 및 데이터 보안으로
+        나눠집니다. 정보 보안은 정보를 보호하기 위한 조직의 노력을 포괄하는
+        용어입니다. 여기에는 물리적 IT 자산 보안, 엔드포인트 보안, 데이터
+        암호화, 네트워크 보안 등이 포함됩니다. IT 보안은 물리적 및 디지털 IT
+        자산과 데이터 센터를 보호하는 것과도 관련이 있지만 종이 파일 및 기타
+        미디어의 저장에 대한 보호는 포함하지 않습니다. 정보 자체 보다는 기술
+        자산에 초점을 맞춥니다.
+      </p>
+    </main>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById('menuList').classList.toggle('show')
+      }
+
+      // 메뉴 클릭 시 active 클래스 적용
+      document.querySelectorAll('.menu-list a').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          document
+            .querySelectorAll('.menu-list a')
+            .forEach((el) => el.classList.remove('active'))
+          e.target.classList.add('active')
+        })
+      })
+    </script>
+  </body>
+</html>

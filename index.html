@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>보안과 암호학 홈페이지</title>
+    <link rel="stylesheet" href="style_default.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">🔐 웹프로그래밍</div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <div id="menuList" class="menu-list">
+          <a href="#">HOME</a>
+          <a href="concept.html">보안이란</a>
+          <a href="ex.html">암호학이란?</a>
+          <a href="job.html">진로 가이드</a>
+          <a href="intro.html">팀원 소개</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1>보안과 암호학의 세계</h1>
+      <p>
+        보안과 암호학의 기초 개념을 알아보고, 다양한 체험과 정보를 제공합니다.
+      </p>
+
+      <div class="card-container">
+        <a class="card" href="concept.html">
+          <img
+            src="https://blog.daouidc.com/hs-fs/hubfs/GettyImages-1428888691.jpg"
+            alt="보안 이미지"
+          />
+          <h3>보안이란?</h3>
+          <p>보안의 개념과 필요성을 소개합니다.</p>
+        </a>
+        <a class="card" href="ex.html">
+          <img
+            src="jam.jpg"
+            alt="암호 이미지"
+          />
+          <h3>암호학 체험</h3>
+          <p>간단한 암호화 실습을 통해 암호학의 원리를 배워보세요.</p>
+        </a>
+        <a class="card" href="job.html">
+          <img
+            src="http://www.mdon.co.kr/data/photos/20141145/art_1414942638.bmp"
+            alt="진로 이미지"
+          />
+          <h3>진로 가이드</h3>
+          <p>보안 전문가가 되기 위한 학습 경로와 커리어를 소개합니다.</p>
+        </a>
+        <div class="card-container">
+          <a class="card" href="intro.html">
+            <img
+              src="pp1.jpg"
+              alt="보안 이미지"
+            />
+            <h3>팀원소개</h3>
+            <p>팀원 소개와 각각의 개인 홈페이지를 소개합니다.</p>
+          </a>
+      </div>
+
+      <div class="faq-section">
+        <h2>자주 묻는 질문 (FAQ)</h2>
+        <div class="faq-item">
+          <button onclick="toggleAnswer(0)">
+            1. 보안 관련 전공을 하면 어떤 진로가 있나요?
+          </button>
+          <div class="faq-answer">
+            보안 컨설턴트, 침해사고 대응 전문가, 악성코드 분석가, 모의해커, 보안
+            솔루션 개발자 등 다양한 진로가 있습니다.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleAnswer(1)">
+            2. 암호학은 수학을 꼭 잘해야 하나요?
+          </button>
+          <div class="faq-answer">
+            수학적 사고력이 중요하지만, 프로그래밍을 통해 실습 중심으로도 학습할
+            수 있습니다.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleAnswer(2)">
+            3. 보안 기술을 배우기 위한 추천 언어는?
+          </button>
+          <div class="faq-answer">
+            Python, C/C++, Java, 그리고 웹 보안을 위한 JavaScript를 추천합니다.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleAnswer(3)">
+            4. 자격증은 어떤 것이 도움이 되나요?
+          </button>
+          <div class="faq-answer">
+            정보보안기사, CISSP, CEH, OSCP 등이 대표적인 자격증입니다.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleAnswer(4)">
+            5. 해커가 되려면 무엇을 공부해야 하나요?
+          </button>
+          <div class="faq-answer">
+            네트워크, 시스템, 프로그래밍, 리버싱, 취약점 분석 등 다양한 분야를
+            공부해야 합니다.
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Note with Video Background -->
+      <div class="tech-note video-background" id="techNote">
+        <video muted playsinline class="background-video" id="techVideo">
+          <source src="video1.mp4" type="video/mp4" />
+          브라우저가 비디오 태그를 지원하지 않습니다.
+        </video>
+        <div class="video-overlay">
+          <h2>Tech Note: 홈페이지 제작 기술</h2>
+          <ul>
+            <li><strong>HTML5:</strong> 구조적 문서 구성에 사용</li>
+            <li><strong>CSS3:</strong> 반응형 디자인, 카드 및 FAQ 스타일링</li>
+            <li><strong>JavaScript:</strong> 메뉴 토글, FAQ 인터랙션 처리</li>
+            <li><strong>Responsive Web Design:</strong> PC/모바일 자동 대응</li>
+            <li>
+              <strong>이미지 출처:</strong> SECON 공식 홈페이지, Getty Images,
+              Velog 등
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tech Note with Video Background -->
+      <div class="tech-note video-background" id="techNote1">
+        <video muted playsinline class="background-video" id="techVideo1">
+          <source src="video2.mp4" type="video/mp4" />
+          브라우저가 비디오 태그를 지원하지 않습니다.
+        </video>
+        <div class="video-overlay">
+          <h2>Tech Note: 팀원별 역할</h2>
+          <ul>
+            <li><strong>김태빈:</strong> 메인, 개인 홈페이지</li>
+            <li>
+              <strong>곽남호:</strong> 개인 홈페이지, 자료조사
+            </li>
+            <li><strong>이원준:</strong> 개인 홈페이지, 자료조사</li>
+            <li><strong>김민우:</strong> 개인 홈페이지, 자료조사</li>
+            <li>
+              <strong>이미지 출처:</strong> SECON 공식 홈페이지, Getty Images,
+              Velog 등
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="quick-menu">
+        <a href="#top">🔝 TOP</a>
+        <a href="concept.html">🔐 보안</a>
+        <a href="ex.html">🔏 암호학</a>
+        <a href="job.html">🎓 진로</a>
+        <a href="intro.html">🎓 팀</a>
+      </div>
+    </main>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById('menuList').classList.toggle('show')
+      }
+
+      function toggleAnswer(index) {
+        const answers = document.querySelectorAll('.faq-answer')
+        const target = answers[index]
+        target.style.display =
+          target.style.display === 'block' ? 'none' : 'block'
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuItems = document.querySelectorAll('.menu-list a')
+
+        menuItems.forEach((item) => {
+          item.addEventListener('click', function () {
+            // 모든 메뉴에서 active 제거
+            menuItems.forEach((i) => i.classList.remove('active'))
+            // 클릭한 메뉴에 active 추가
+            this.classList.add('active')
+          })
+        })
+      })
+
+      // 현재 페이지 URL을 기준으로 active 클래스 부여
+      document.addEventListener('DOMContentLoaded', () => {
+        const current = window.location.pathname
+        const links = document.querySelectorAll('.menu-list a')
+        links.forEach((link) => {
+          if (link.href.includes(current)) {
+            link.classList.add('active')
+          }
+        })
+      })
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const video = document.getElementById('techVideo')
+        const techNote = document.getElementById('techNote')
+        let hasPlayed = false
+
+        // 화면 진입 시 자동 재생 (1회만)
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && !hasPlayed) {
+                video.play()
+                hasPlayed = true
+                observer.unobserve(video)
+              }
+            })
+          },
+          { threshold: 0.6 }
+        )
+
+        observer.observe(video)
+
+        // 클릭 시 play/pause 토글
+        techNote.addEventListener('click', () => {
+          if (video.paused) {
+            video.play()
+          } else {
+            video.pause()
+          }
+        })
+      })
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const video = document.getElementById('techVideo1')
+        const techNote = document.getElementById('techNote1')
+        let hasPlayed = false
+
+        // 화면 진입 시 자동 재생 (1회만)
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && !hasPlayed) {
+                video.play()
+                hasPlayed = true
+                observer.unobserve(video)
+              }
+            })
+          },
+          { threshold: 0.6 }
+        )
+
+        observer.observe(video)
+
+        // 클릭 시 play/pause 토글
+        techNote1.addEventListener('click', () => {
+          if (video.paused) {
+            video.play()
+          } else {
+            video.pause()
+          }
+        })
+      })
+    </script>
+  </body>
+</html>
